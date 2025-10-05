@@ -5,7 +5,7 @@
 
 export const branding = {
   // Business Info
-  businessName: "Modern Business Co.",
+  businessName: "Aura Web Pro",
   tagline: "Excellence in Every Detail",
   description: "We deliver premium solutions tailored to your needs with cutting-edge technology and exceptional service.",
   
@@ -27,9 +27,9 @@ export const branding = {
   },
   
   // Contact Details
-  email: "hello@modernbusiness.com",
-  phone: "+1 (555) 123-4567",
-  address: "123 Business St, Suite 100, City, State 12345",
+  email: "dharanibala0512@gmail.com",
+  phone: "+91 99402 38132",
+  address: "New Perungalathur, Chennai - 600 063",
   
   // Social Links
   social: {
@@ -64,7 +64,8 @@ export const branding = {
   ],
   
   // About Section
-  about: {
+  about:
+    {
     mission: "Our mission is to empower businesses with innovative solutions that drive growth and success in the digital age.",
     story: "Founded with a passion for excellence, we've been helping businesses transform their digital presence since 2020. Our team of experts combines creativity with technical expertise to deliver results that exceed expectations.",
   },

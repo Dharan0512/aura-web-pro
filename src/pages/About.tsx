@@ -78,7 +78,7 @@ export default function About() {
         >
           <h2 className="text-3xl font-bold mb-6">Our Story</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            {branding.about.story}
+            {branding?.about?.story}
           </p>
         </motion.div>
 
