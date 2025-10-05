@@ -9,6 +9,23 @@ export const branding = {
   tagline: "Excellence in Every Detail",
   description: "We deliver premium solutions tailored to your needs with cutting-edge technology and exceptional service.",
   
+  // Theme Colors (HSL format: "hue saturation% lightness%")
+  // Customize these for each client's brand
+  colors: {
+    light: {
+      primary: "262 83% 58%",           // Main brand color
+      primaryGlow: "262 90% 68%",       // Lighter version for effects
+      background: "0 0% 100%",          // Page background
+      foreground: "240 10% 3.9%",       // Text color
+    },
+    dark: {
+      primary: "262 83% 58%",           // Main brand color (dark mode)
+      primaryGlow: "262 90% 68%",       // Lighter version for effects
+      background: "240 10% 3.9%",       // Page background (dark mode)
+      foreground: "0 0% 98%",           // Text color (dark mode)
+    },
+  },
+  
   // Contact Details
   email: "hello@modernbusiness.com",
   phone: "+1 (555) 123-4567",

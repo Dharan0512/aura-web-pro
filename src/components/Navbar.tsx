@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { branding } from "@/config/branding";
 import { motion, AnimatePresence } from "framer-motion";
+import { applyBrandColors } from "@/lib/applyBrandColors";
 
 export const Navbar = () => {
   const [theme, setTheme] = useState<"light" | "dark">("light");
@@ -13,12 +14,14 @@ export const Navbar = () => {
   useEffect(() => {
     const isDark = document.documentElement.classList.contains("dark");
     setTheme(isDark ? "dark" : "light");
+    applyBrandColors();
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     document.documentElement.classList.toggle("dark");
+    applyBrandColors();
   };
 
   const navLinks = [
