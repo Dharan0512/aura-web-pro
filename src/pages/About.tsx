@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { branding } from "@/config/branding";
 import { Target, Heart, Users, Award } from "lucide-react";
+import SEO from "@/components/SEO";
 
 export default function About() {
   const values = [
@@ -28,6 +29,11 @@ export default function About() {
   ];
 
   return (
+    <>
+    {/* <SEO
+        title="About Us"
+        description={branding.about.mission}
+      /> */}
     <div className="min-h-screen pt-24 pb-20 px-4">
       <div className="container mx-auto max-w-6xl">
         {/* Hero Section */}
@@ -145,5 +151,6 @@ export default function About() {
         </motion.div>
       </div>
     </div>
+    </>
   );
 }

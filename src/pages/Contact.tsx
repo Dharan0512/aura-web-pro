@@ -18,6 +18,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import SEO from "@/components/SEO";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters").max(100),
@@ -80,6 +81,11 @@ export default function Contact() {
   ];
 
   return (
+    <>
+    {/* <SEO 
+        title="Contact Us"
+        description={`Get in touch with ${branding.businessName}. We're here to help with your business needs.`}
+      /> */}
     <div className="min-h-screen pt-24 pb-20 px-4">
       <div className="container mx-auto max-w-6xl">
         {/* Hero Section */}
@@ -158,7 +164,7 @@ export default function Contact() {
                         <FormLabel>Message</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="Tell us about your project..."
+                            placeholder="Tell us about your query..."
                             className="min-h-[150px] resize-none"
                             {...field}
                           />
@@ -243,5 +249,6 @@ export default function Contact() {
         </div>
       </div>
     </div>
+    </>
   );
 }

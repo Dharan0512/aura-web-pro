@@ -39,7 +39,8 @@ export const Navbar = () => {
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center text-primary-foreground font-bold text-lg">
               {branding.businessName.charAt(0)}
             </div>
-            <span className="font-bold text-lg hidden sm:block">{branding.businessName}</span>
+            <span className="font-bold text-lg hidden sm:block">{branding.businessName}
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

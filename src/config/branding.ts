@@ -9,6 +9,14 @@ export const branding = {
   tagline: "Excellence in Every Detail",
   description: "We deliver premium solutions tailored to your needs with cutting-edge technology and exceptional service.",
   
+    logo: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=200&h=200&fit=crop",
+  
+  // SEO Meta Data
+  seo: {
+    keywords: "web development, digital marketing, brand design, business solutions",
+    author: "Aura Web Pro",
+    ogImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop",
+  },
   // Theme Colors (HSL format: "hue saturation% lightness%")
   // Customize these for each client's brand
   colors: {
@@ -17,12 +25,16 @@ export const branding = {
       primaryGlow: "262 90% 68%",       // Lighter version for effects
       background: "0 0% 100%",          // Page background
       foreground: "240 10% 3.9%",       // Text color
+      card: "0 0% 98%",                 // Card background
+      muted: "240 4.8% 95.9%",          // Muted background
     },
     dark: {
       primary: "262 83% 58%",           // Main brand color (dark mode)
       primaryGlow: "262 90% 68%",       // Lighter version for effects
       background: "240 10% 3.9%",       // Page background (dark mode)
       foreground: "0 0% 98%",           // Text color (dark mode)
+      card: "240 10% 7%",               // Card background
+      muted: "240 3.7% 15.9%",          // Muted background
     },
   },
   
@@ -60,6 +72,35 @@ export const branding = {
       title: "Consulting",
       description: "Expert guidance to help your business reach its full potential",
       icon: "Users",
+    },
+  ],
+
+  gallery: [
+    {
+      url: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+      alt: "Modern office workspace"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800",
+      alt: "Team collaboration"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
+      alt: "Business analytics"
+    },
+  ],
+  
+  // Preview Videos (add your client videos here)
+  videos: [
+    {
+      url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      thumbnail: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800",
+      title: "Our Services Overview"
+    },
+    {
+      url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      thumbnail: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800",
+      title: "Client Success Stories"
     },
   ],
   

@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { branding } from "@/config/branding";
+import VideoPlayer from "@/components/VideoPlayer";
 import { Code, Palette, TrendingUp, Users, ArrowRight } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const iconMap = {
   Code,
@@ -14,7 +16,50 @@ const iconMap = {
 
 export default function Home() {
   return (
+    <>
+    {/* <SEO/> */}
     <div className="min-h-screen">
+      {/* Floating animation elements */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+          <motion.div
+            className="absolute top-20 left-10 w-20 h-20 rounded-full bg-primary/10"
+            animate={{
+              y: [0, -30, 0],
+              x: [0, 20, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute bottom-40 right-20 w-32 h-32 rounded-full bg-primary/5"
+            animate={{
+              y: [0, 40, 0],
+              x: [0, -30, 0],
+              scale: [1, 1.3, 1],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute top-1/2 right-10 w-16 h-16 rounded-full bg-primary/8"
+            animate={{
+              y: [0, -40, 0],
+              rotate: [0, 180, 360],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+          />
+        </div>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
@@ -91,6 +136,80 @@ export default function Home() {
         </div>
       </section>
 
+       {/* Video Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-bold mb-4">Watch Our Story</h2>
+            <p className="text-muted-foreground">
+              See how we bring ideas to life
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {branding.videos.map((video, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <VideoPlayer
+                  videoUrl={video.url}
+                  thumbnail={video.thumbnail}
+                  title={video.title}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-bold mb-4">Our Work</h2>
+            <p className="text-muted-foreground">
+              A glimpse into what we create
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {branding.gallery.map((image, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ scale: 1.05 }}
+                className="overflow-hidden rounded-lg shadow-md"
+              >
+                <img
+                  src={image.url}
+                  alt={image.alt}
+                  className="w-full h-64 object-cover"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
@@ -117,5 +236,6 @@ export default function Home() {
         </div>
       </section>
     </div>
+    </>
   );
 }
